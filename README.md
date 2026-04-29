@@ -8,18 +8,6 @@ The overlay is rendered with **Direct3D 9 Extended (`IDirect3D9Ex`)** + **Dear I
 `WS_POPUP` with `WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOPMOST`
 `ImGui::GetOverlayDrawList()`
 
-Architecture
-
-┌─────────────────────────────────────────────┐
-│  Single Thread (reads → logic → render)    │
-│                                             │
-│  update_entities()   → FPGA scatter reads   │
-│        ↓                                    │
-│  classify / filter   → populate g_entities  │
-│        ↓                                    │
-│  draw_esp()          → ImGui + DX9 present  │
-└─────────────────────────────────────────────┘
-
 Dependencies
 
 MemProcFS / VMMDLL — FPGA DMA interface
