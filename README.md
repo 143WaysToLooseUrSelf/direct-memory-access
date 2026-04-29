@@ -1,4 +1,4 @@
-DMA VERSION
+rework external to DMA VERSION
 
 The overlay is rendered with **Direct3D 9 Extended (`IDirect3D9Ex`)** + **Dear ImGui**.
 
